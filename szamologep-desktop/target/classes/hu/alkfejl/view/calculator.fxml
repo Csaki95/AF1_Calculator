@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="550.0" style="-fx-background-color: #ecf0f1;" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.alkfejl.view.controller.CalculatorController">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="550.0">
+         <children>
+            <Button id="changeButton" fx:id="toExchange" mnemonicParsing="false" onAction="#swapScene" text="Váltó" />
+            <GridPane prefHeight="689.0" prefWidth="550.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="num1" disable="true" focusTraversable="false" prefHeight="66.0" prefWidth="395.0" GridPane.columnSpan="6">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <Text fx:id="sign" strokeType="OUTSIDE" strokeWidth="0.0" text="+" textAlignment="CENTER" wrappingWidth="140.13671875" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <TextField fx:id="num2" disable="true" focusTraversable="false" prefHeight="66.0" prefWidth="395.0" GridPane.columnSpan="6" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <Button fx:id="select1" mnemonicParsing="false" onAction="#setFirstNum" prefHeight="65.0" prefWidth="127.0" stylesheets="@style/style.css" text="&lt;" GridPane.columnIndex="6">
+                     <GridPane.margin>
+                        <Insets bottom="2.0" />
+                     </GridPane.margin></Button>
+                  <Button fx:id="select2" mnemonicParsing="false" onAction="#setSecondNum" prefHeight="65.0" prefWidth="106.0" text="&lt;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="1.0" />
+                     </GridPane.margin></Button>
+                  <Button fx:id="b7" contentDisplay="CENTER" mnemonicParsing="false" onAction="#set7" prefHeight="65.0" prefWidth="79.0" text="7" GridPane.rowIndex="3" />
+                  <Button fx:id="b8" contentDisplay="CENTER" mnemonicParsing="false" onAction="#set8" prefHeight="65.0" prefWidth="79.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="b9" contentDisplay="CENTER" mnemonicParsing="false" onAction="#set9" prefHeight="65.0" prefWidth="79.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="sin" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcSin" prefHeight="65.0" prefWidth="79.0" text="sin" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button fx:id="add" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcAdd" prefHeight="65.0" prefWidth="79.0" text="+" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Button fx:id="divRes" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcDivRes" prefHeight="65.0" prefWidth="79.0" text="\%" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <Button fx:id="calMp" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveCalMp" prefHeight="65.0" prefWidth="79.0" text="M+" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <Button fx:id="b5" contentDisplay="CENTER" mnemonicParsing="false" onAction="#set5" prefHeight="65.0" prefWidth="79.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="b4" contentDisplay="CENTER" mnemonicParsing="false" onAction="#set4" prefHeight="65.0" prefWidth="79.0" text="4" GridPane.rowIndex="4" />
+                  <Button fx:id="b6" contentDisplay="CENTER" mnemonicParsing="false" onAction="#set6" prefHeight="65.0" prefWidth="79.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button fx:id="cos" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcCos" prefHeight="65.0" prefWidth="79.0" text="cos" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Button fx:id="sub" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcSub" prefHeight="65.0" prefWidth="79.0" text="-" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Button fx:id="square" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcSquare" prefHeight="65.0" prefWidth="79.0" text="x²" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Button fx:id="calM" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveCalM" prefHeight="65.0" prefWidth="79.0" text="M" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                  <Button fx:id="b1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#set1" prefHeight="65.0" prefWidth="79.0" text="1" GridPane.rowIndex="5" />
+                  <Button fx:id="b2" contentDisplay="CENTER" mnemonicParsing="false" onAction="#set2" prefHeight="65.0" prefWidth="79.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Button fx:id="b3" contentDisplay="CENTER" mnemonicParsing="false" onAction="#set3" prefHeight="65.0" prefWidth="79.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Button fx:id="tan" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcTan" prefHeight="65.0" prefWidth="79.0" text="tan" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Button fx:id="mult" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcMult" prefHeight="65.0" prefWidth="79.0" text="*" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Button fx:id="squareR" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcSquareR" prefHeight="65.0" prefWidth="79.0" text="√x" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                  <Button fx:id="numMp" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveNumMp" prefHeight="65.0" prefWidth="79.0" text="m+" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                  <Button fx:id="pre" contentDisplay="CENTER" mnemonicParsing="false" onAction="#setPrefix" prefHeight="65.0" prefWidth="79.0" text="+/-" GridPane.rowIndex="6" />
+                  <Button fx:id="b0" contentDisplay="CENTER" mnemonicParsing="false" onAction="#set0" prefHeight="65.0" prefWidth="79.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Button fx:id="dot" contentDisplay="CENTER" mnemonicParsing="false" onAction="#setPoint" prefHeight="65.0" prefWidth="79.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Button fx:id="del" contentDisplay="CENTER" mnemonicParsing="false" onAction="#delChar" prefHeight="65.0" prefWidth="79.0" style="-fx-background-radius: 0;" text="DEL" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <Button fx:id="div" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcDiv" prefHeight="65.0" prefWidth="79.0" text="/" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                  <Button fx:id="rec" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcRec" prefHeight="65.0" prefWidth="79.0" text="rec" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                  <Button fx:id="numM" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveNumM" prefHeight="65.0" prefWidth="79.0" text="m" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                  <Button fx:id="equal" contentDisplay="CENTER" mnemonicParsing="false" onAction="#calcRes" prefHeight="65.0" prefWidth="622.0" text="=" GridPane.columnSpan="7" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

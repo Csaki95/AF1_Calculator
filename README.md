@@ -13,7 +13,7 @@ A db/resources/calc.db fájl helyezd át a tomcat szerver mappájába ez alapér
 
 A db/resources mappában található az sqlite.exe, és a táblát létrehozó kód.
 
-###Asztali futtatás
+### Asztali futtatás
 
 Bármilyen probléma esetén először maven ablakon belül
 

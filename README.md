@@ -1,4 +1,4 @@
-# AF1 - Java kötelező program
+# AF1 - Java kötelező program (2019)
 
 Alkalmazás fejlesztés I. kurzus keretén Java nyelven történő alkalmazás fejlesztése volt a feladat.
 A feladat folyamán egy számológépet, és váltó (valuta, súly, stb.) alkalmazást kellett megvalósítani.
